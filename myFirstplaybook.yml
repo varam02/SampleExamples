@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: 10.0.0.5
   become: yes
   tasks:
   - name: in this task,i want to install tree
