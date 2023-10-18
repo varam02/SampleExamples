@@ -9,5 +9,5 @@
   - name: this task,i want to start apache2 services
     service:
       name: apache2
-      state: stopped
+      state: started
       enabled: yes
