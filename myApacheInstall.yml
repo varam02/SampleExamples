@@ -1,13 +1,15 @@
 ---
 - hosts: all
   become: yes
+  gather_facts: yes
   tasks:
-  - name: this task,i want to install apache2
+  - name: in this task,install apache2 
     apt:
      name: apache2
      state: present
-  - name: this task,i want to start apache2 services
+    when: ansible_os_family=='Debian'
+  - name: in tis task,start apache2 service
     service:
-      name: apache2
-      state: started
-      enabled: yes
+       name: apache2
+       state: started
+    when: ansible_os_family=='Debian'
