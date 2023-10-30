@@ -1,18 +1,13 @@
 ---
 - hosts: all
   become: yes
-  
   tasks:
-    - name: Update APT package cache
-      apt:
-      update_cache: yes
-    - name: Install nginx
-      apt:
-       - name: nginx
-         state: present
-    - name: start nginx
-      apt:
-       - name: nginx
-         state: started
-
-        
+  - name: Install Nginx 
+    apt:
+     name: nginx
+     state: present
+     update_cache: yes
+  - name: start nginx service
+    service:
+       name: nginx
+       state: started
