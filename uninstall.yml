@@ -1,0 +1,26 @@
+---
+- name: Uninstall Nginx from Ubuntu
+  hosts: all
+  become: yes  # To run tasks with sudo privileges
+
+  tasks:
+    - name: Remove Nginx package
+      apt:
+        name: nginx
+        state: absent
+
+    - name: Remove Nginx configuration files
+      file:
+        path: "{{ item }}"
+        state: absent
+      with_items:
+        - /etc/nginx
+        - /var/www/html
+        - /etc/default/nginx
+      when: ansible_facts['ansible_os_family'] == 'Debian'
+
+    - name: Stop Nginx service
+      service:
+        name: nginx
+        state: stopped
+      when: ansible_facts['ansible_os_family'] == 'Debian'
