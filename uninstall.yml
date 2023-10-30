@@ -17,10 +17,10 @@
         - /etc/nginx
         - /var/www/html
         - /etc/default/nginx
-      when: ansible_facts['ansible_os_family'] == 'Debian'
+      when: ansible_os_family=='Debian'
 
     - name: Stop Nginx service
       service:
         name: nginx
         state: stopped
-      when: ansible_facts['ansible_os_family'] == 'Debian'
+      when: ansible_os_family=='Debian'
