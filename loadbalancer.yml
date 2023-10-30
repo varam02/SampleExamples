@@ -3,8 +3,8 @@
   become: yes
   
   tasks:
-    - name : Update APT package cache
-      apt :
+    - name: Update APT package cache
+      apt:
       update_cache: yes
     - name: Install nginx
       apt:
@@ -14,5 +14,5 @@
       apt:
        - name: nginx
          state: started
-          
+
         
