@@ -13,6 +13,7 @@
         name: nginx
         state: present
     - name: Ensure Nginx service is started
+      become: yes
       service:
         name: nginx
         state: started
