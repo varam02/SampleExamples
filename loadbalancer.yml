@@ -12,3 +12,7 @@
       apt:
         name: nginx
         state: present
+    - name: Ensure Nginx service is started
+      service:
+        name: nginx
+        state: started
