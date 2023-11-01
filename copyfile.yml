@@ -4,8 +4,8 @@
   tasks:
   - name: Copy file from one directory to another
     copy:
-    src: /home/maha/f1
-    dest: /home/maha/sampleexamples
-    owner: maha
-    group: maha
-    mode: 0777
+      src: /home/maha/f1
+      dest: /home/maha/sampleexamples
+      owner: maha
+      group: maha
+      mode: 0777
