@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: revome file from directory
+    file:
+      path: /home/maha/f1
+      state: absent
