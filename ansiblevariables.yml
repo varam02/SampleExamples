@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+  - name:
+      apt:
+       name: "{mywebpackonubuntu}"
+       state: present
+       update_cache: yes
+    when: ansible_os_family == "Debian"
+  - name:
+     service:
+       name: "{mywebpackonubuntu}"
+       state: stoped
+    when: ansible_os_family == "Debian"
