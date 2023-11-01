@@ -4,13 +4,13 @@
   gather_facts: yes
   tasks:
   - name:
-      apt:
+    apt:
        name: "{mywebpackonubuntu}"
        state: present
        update_cache: yes
     when: ansible_os_family == "Debian"
   - name:
-     service:
+    service:
        name: "{mywebpackonubuntu}"
-       state: stoped
+       state: stopped
     when: ansible_os_family == "Debian"
