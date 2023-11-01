@@ -5,12 +5,12 @@
   tasks:
   - name:
     apt:
-       name: "{mywebpackonubuntu}"
+       name: "{{mywebpackonubuntu}}"
        state: present
        update_cache: yes
     when: ansible_os_family == "Debian"
   - name:
     service:
-       name: "{mywebpackonubuntu}"
+       name: "{{mywebpackonubuntu}}"
        state: stopped
     when: ansible_os_family == "Debian"
