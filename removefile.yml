@@ -4,5 +4,5 @@
   tasks:
   - name: revome file from directory
     file:
-      path: /home/maha/f1
+      path: /home/maha/sampleexamples
       state: absent
