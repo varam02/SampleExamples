@@ -12,5 +12,5 @@
   - name:
     service:
        name: "{{mywebpackonubuntu}}"
-       state: stopped
+       state: started
     when: ansible_os_family == "Debian"
