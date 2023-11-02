@@ -6,7 +6,5 @@
   - name: i want to uninstall java on Ubuntu
     apt:
      name: "{{myjavapackonubuntu}}"
-     state: absent
-    loop:
-      - openjdk-8-jdk
+     state: present
     when: ansible_os_family == "Debian"
