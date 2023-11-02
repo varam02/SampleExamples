@@ -2,9 +2,9 @@
 - hosts: mywebservers
   become: yes
   tasks:
-  - name: uninstall JDKon ubuntu
+  - name: uninstall JDK on ubuntu
     apt:
      name: "{{myjavapackonubuntu}}"
      state: absent
   - name: remove java path
-    shell: rm -rf  /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+    shell: rm -rf  /usr/lib/jvm/java-8-openjdk-amd64
