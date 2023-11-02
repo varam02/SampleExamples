@@ -1,10 +1,10 @@
 --- 
-- hosts: all
+- hosts: mywebservers
   become: yes
   gather_facts: yes
   tasks:
   - name: uninstall java
     apt:
-     name: openjdk-8-jdk
+     name: "{{myjavapackonubuntu}}"
      state: absent
     when: ansible_os_family=='Debian'
