@@ -3,8 +3,10 @@
   become: yes
   gather_facts: yes
   tasks:
-  - name: i want to install java on Ubuntu
+  - name: i want to uninstall java on Ubuntu
     apt:
      name: "{{myjavapackonubuntu}}"
      state: absent
+    loop:
+      - openjdk-8-jdk
     when: ansible_os_family == "Debian"
