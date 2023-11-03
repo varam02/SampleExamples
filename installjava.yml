@@ -3,7 +3,7 @@
   become: yes
   gather_facts: yes
   tasks:
-  - name: i want to install java on Ubuntu
+  - name: Install java on Ubuntu
     apt:
      name: "{{myjavapackonubuntu}}"
      state: present
