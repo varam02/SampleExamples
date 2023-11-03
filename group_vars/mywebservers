@@ -1,4 +1,4 @@
 ---
-var01: value
+//var01: value
 mywebpackonubuntu: apache2
-myjavapackonubuntu: openjdk-11-jre-headless
+myjavapackonubuntu: openjdk-11-jre-headless//
