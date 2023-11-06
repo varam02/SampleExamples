@@ -15,6 +15,6 @@
   - name: i want to install wget
     apt:
      name: wget
-     state: absent
+     state: present
     tags: mywget
   
