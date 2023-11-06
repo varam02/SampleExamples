@@ -1,0 +1,21 @@
+---
+- hosts: 10.0.0.5,10.0.0.6
+  become : yes
+  tasks:
+  - name: i want to execute direct linux command 
+    command: hostname -f
+    register: myfirsttaskresult
+  - name: i want to debug first task results 
+    debug:
+       msg: "{{myfirsttaskresult}}"
+  - name: i want to istall git
+    apt:
+     name: git
+     state: present
+    when: myfirsttaskresult.stderr==""
+  - name: i want to install tree
+    apt:
+     name: tree 
+     state: present
+    when: myfirsttaskresult.stderr==""
+  
