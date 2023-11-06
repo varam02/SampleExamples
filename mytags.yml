@@ -5,7 +5,7 @@
   - name: i want to install git
     apt:
      name: git
-     state: absent
+     state: present
     tags: mygit
   - name: i want to install tree
     apt:
