@@ -1,0 +1,20 @@
+---
+- hosts: 10.0.0.5,10.0.0.6
+  become: yes
+  tasks:
+  - name: i want to install git
+    apt:
+     name: git
+     state: present
+    tags: mygit
+  - name: i want to install tree
+    apt:
+     name: tree
+     state: mytree
+    tags: mytree
+  - name: i want to install wget
+    apt:
+     name: wget
+     state: present
+    tags: mywget
+  
