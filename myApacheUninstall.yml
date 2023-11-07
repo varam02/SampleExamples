@@ -2,13 +2,13 @@
 - hosts: 10.0.0.5
   become: yes
   tasks:
-  - name: install apache2
+  - name: install git
     apt: 
-     name: apache2
+     name: git
      state: present
-    notify: stop apache2
+    notify: stop git
   handlers:
-    - name: stop apache2
+    - name: stop git
       service:
-        name: apache2
-        state: stopped
+        name: git
+        state: absent
