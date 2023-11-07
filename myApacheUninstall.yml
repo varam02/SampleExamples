@@ -6,7 +6,7 @@
     apt: 
      name: apache2
      state: present
-  notify: stop apache2
+    notify: stop apache2
   handlers:
     - name: stop apache2
       service:
