@@ -1,0 +1,9 @@
+---
+- hosts: mywebservers
+  become: yes
+  tasks:
+  - name: create a file
+    file:
+      path: /home/maha/myfirstfile
+      state: touch
+      mode: u=rw,g=rw,o=r
