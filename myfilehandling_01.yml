@@ -3,10 +3,11 @@
   become: yes
   tasks:
   - name: i want to install webserver
-    apt: apache2
-    state: present
+    apt: 
+     name: apache2
+     state: present
   - name: copy index file into node site 
     template:
       src: myindexfile.j2
       dest: /var/www/html/index.html
-      
+
