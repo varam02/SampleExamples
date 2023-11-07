@@ -2,4 +2,4 @@
 - hosts: mywebservers
   become: yes
   tasks:
-  - include_task: myfile.yml
+  - include_tasks: myfile.yml
