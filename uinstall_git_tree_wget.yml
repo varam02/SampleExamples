@@ -1,0 +1,16 @@
+---
+- hosts: mywebservers
+  become: yes
+  tasks:
+  - name: i want to uninstall git 
+    apt:
+     name: git 
+     state: absent
+  - name: i want to uninstall tree
+    apt:
+     name: tree
+     state: absent
+  - name: i want to uninstall wget
+    apt:
+     name: wget
+     state: absent
