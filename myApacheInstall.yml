@@ -11,11 +11,5 @@
     service:
       name: apache2
       state: started
-    notify: stop webservers  
     when: ansible_os_family == "Debian" 
-  handlers:
-    - name: stop apache2
-      service:
-         name: apache2
-         state: stopped
   
