@@ -13,7 +13,7 @@
       state: started
     notify: restart webservers  
     when: ansible_os_family == "Debian" 
-  handlers:
+    handlers:
     - name: restart webservers
       service:
          name: apache2
