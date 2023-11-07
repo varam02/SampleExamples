@@ -10,4 +10,8 @@
     template:
       src: myindexfile.j2
       dest: /var/www/html/index.html
-
+  handlers:
+    - name: restart webservers
+      service:
+         name: apache2
+         state: restarted
