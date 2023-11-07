@@ -6,4 +6,4 @@
     file:
       path: /home/maha/myfirstfile
       state: touch
-      mode: u=rw,g=r,o=r
+      mode: u=rw,g=rw,o=r
