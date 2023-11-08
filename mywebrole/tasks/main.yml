@@ -1,7 +1,7 @@
 ---
 # tasks file for mywebrole
-- name: Install apache2 webserver
+- name: Install git
   apt:
-     name: apache2
+     name: git
      state: present
    
