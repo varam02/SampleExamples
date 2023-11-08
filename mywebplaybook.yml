@@ -2,4 +2,5 @@
 - hosts: mywebservers
   become: yes
   roles:
-     - {role: mywebrole} 
+     - mywebrole
+       
