@@ -1,0 +1,8 @@
+--- 
+- hosts: mywebservers
+  become: yes
+  tasks:
+  - name: Uninstall apache2
+    service:
+      name: apache2
+      state: absent
