@@ -1,2 +1,6 @@
 ---
 # tasks file for myapache2start
+- name: start webserver apache2
+  service:
+   name: apache2
+   state: started

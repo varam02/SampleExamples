@@ -1,0 +1,5 @@
+---
+- hosts: mywebservers
+  become: yes
+  roles:
+         -myapache2start
